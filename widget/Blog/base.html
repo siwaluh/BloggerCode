@@ -1,0 +1,101 @@
+<b:widget id='Blog1' locked='true' type='Blog' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+    <b:widget-setting name='commentLabel'>Komentar</b:widget-setting>
+    <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+    <b:widget-setting name='authorLabel'>Oleh</b:widget-setting>
+    <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='showAuthor'>true</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='timestampLabel'>Pada</b:widget-setting>
+    <b:widget-setting name='reactionsLabel' />
+    <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+    <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+    <b:widget-setting name='showLabels'>true</b:widget-setting>
+    <b:widget-setting name='showLocation'>false</b:widget-setting>
+    <b:widget-setting name='postLabelsLabel' />
+    <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+    <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+    <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+    <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+    <b:widget-setting name='showReactions'>false</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main' var='this'>
+    <b:with value='data:widgets.FeaturedPost filter (w =&gt; w.sectionId == &quot;postbody&quot;) map (w =&gt; w.postId)' var='featuredPostIds'>
+      <b:with value='data:view.isHomepage ? data:posts filter (post =&gt; post.id not in data:featuredPostIds): data:posts' var='posts'>
+        <b:include name='postCommentsAndAd' data='post' />
+      </b:with>
+    </b:with>
+  </b:includable>
+  <b:includable id='aboutPostAuthor' />
+  <b:includable id='addComments' />
+  <b:includable id='blogThisShare' />
+  <b:includable id='bylineByName' />
+  <b:includable id='bylineRegion' />
+  <b:includable id='commentAuthorAvatar' var='v' />
+  <b:includable id='commentDeleteIcon' var='comment' />
+  <b:includable id='commentForm' var='post' />
+  <b:includable id='commentFormIframeSrc' var='post' />
+  <b:includable id='commentFormulir' />
+  <b:includable id='commentItem' var='obj' />
+  <b:includable id='commentList' var='post' />
+  <b:includable id='commentPicker' var='post' />
+  <b:includable id='commentReply' var='obj' />
+  <b:includable id='comments' var='post' />
+  <b:includable id='commentsLink' />
+  <b:includable id='commentsLinkIframe' />
+  <b:includable id='commentsTitle' var='post' />
+  <b:includable id='dataMessages' />
+  <b:includable id='defaultAdUnit' />
+  <b:includable id='emailPostIcon' />
+  <b:includable id='facebookShare' />
+  <b:includable id='feedLinks' />
+  <b:includable id='feedLinksBody' var='links' />
+  <b:includable id='feedPosts' var='i' />
+  <b:includable id='footerBylines' />
+  <b:includable id='googlePlusShare' />
+  <b:includable id='headerByline' />
+  <b:includable id='homePageLink' />
+  <b:includable id='iframeComments' />
+  <b:includable id='inlineAd' var='post' />
+  <b:includable id='linkShare' />
+  <b:includable id='nextPageLink' />
+  <b:includable id='nextPrevPost' />
+  <b:includable id='otherSharingButton' />
+  <b:includable id='platformShare' />
+  <b:includable id='post' var='post' />
+  <b:includable id='postAuthor' />
+  <b:includable id='postBody' var='post' />
+  <b:includable id='postBodySnippet' var='i' />
+  <b:includable id='postCommentsAndAd' var='post' />
+  <b:includable id='postCommentsLink' />
+  <b:includable id='postFooter' var='i' />
+  <b:includable id='postFooterAuthorProfile' var='post' />
+  <b:includable id='postHeader' var='post' />
+  <b:includable id='postJumpLink' />
+  <b:includable id='postLabels' var='i' />
+  <b:includable id='postLocation' />
+  <b:includable id='postMeta' var='post' />
+  <b:includable id='postMetadataJSONImage' />
+  <b:includable id='postMetadataJSONPublisher' />
+  <b:includable id='postPagination' />
+  <b:includable id='postReactions' />
+  <b:includable id='postShareButtons' />
+  <b:includable id='postTimestamp' />
+  <b:includable id='postTitle' var='post' />
+  <b:includable id='previousPageLink' />
+  <b:includable id='shareButton' var='post' />
+  <b:includable id='sharingButton' />
+  <b:includable id='sharingButtonContent' />
+  <b:includable id='sharingButtons' />
+  <b:includable id='sharingButtonsMenu' />
+  <b:includable id='sharingPlatformIcon' />
+  <b:includable id='threadedCommentForm' var='post' />
+  <b:includable id='threadedCommentJs' var='post' />
+  <b:includable id='threadedComments' var='post' />
+</b:widget>
